@@ -12,10 +12,10 @@ def extract_term(term):
 
     return soup
 
-key = input("digita seu termo: ")
+key = input("Digite o termo de busca: ")
 content = extract_term(key)
 
-workbook = xlsxwriter.Workbook('teste.xlsx')
+workbook = xlsxwriter.Workbook(f'{key}.xlsx')
 worksheet = workbook.add_worksheet()
 bold = workbook.add_format({'bold': True})
 
